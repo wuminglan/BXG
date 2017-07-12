@@ -20,5 +20,18 @@ if (location.pathname != '/login') {
 	$('.aside>.profile').html(htmlInfo);
 }
 
+$("#logoutBut").on('click',function(){
+	
+	$.ajax({
+		url:'/api/logout',
+		type:'post',
+		success:function(info){
+			if(info.code==200){
+				location.href='login';
+			}
+		}
+	});
+});
+
 });
 
