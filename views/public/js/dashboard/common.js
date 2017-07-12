@@ -20,5 +20,20 @@ if (location.pathname != '/login') {
 	$('.aside>.profile').html(htmlInfo);
 }
 
+$("#logoutBut").on("click",function(){
+	alert("fda");
+	$.ajax({
+	   url:'http://api.botue.com/logout',
+	   type:'post',
+	   success:function(info){
+		 	if(info.code==200){
+				 location.href='login';
+			 }
+	   }
+	});
 });
+
+});
+
+
 

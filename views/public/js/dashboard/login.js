@@ -1,3 +1,5 @@
+ 
+ //1.定义ajax模块
  define([
      'jquery',
      'cookie'
