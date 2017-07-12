@@ -20,16 +20,16 @@ if (location.pathname != '/login') {
 	$('.aside>.profile').html(htmlInfo);
 }
 
-$("#logoutBut").on("click",function(){
-	alert("fda");
+$("#logoutBut").on('click',function(){
+	
 	$.ajax({
-	   url:'http://api.botue.com/logout',
-	   type:'post',
-	   success:function(info){
-		 	if(info.code==200){
-				 location.href='login';
-			 }
-	   }
+		url:'/api/logout',
+		type:'post',
+		success:function(info){
+			if(info.code==200){
+				location.href='login';
+			}
+		}
 	});
 });
 
